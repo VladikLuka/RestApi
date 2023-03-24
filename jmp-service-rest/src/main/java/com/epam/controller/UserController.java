@@ -49,7 +49,7 @@ public class UserController {
     }
 
     @ApiOperation("Retrieve used by id")
-    @GetMapping(value = "/{id}", produces = "application/json")
+    @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public UserResponseDto getUser(@PathVariable Long id){
         User user = userService.getUser(id);
@@ -57,7 +57,7 @@ public class UserController {
     }
 
     @ApiOperation("Retrieve all users")
-    @GetMapping(value = "/")
+    @GetMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.OK)
     public List<UserResponseDto> getAllUser(){
         List<User> allUser = userService.getAllUser();
