@@ -1,0 +1,4 @@
+com/epam/impl/UserRepository.class
+com/epam/impl/ISubscriptionRepository.class
+com/epam/impl/SubscriptionService.class
+com/epam/impl/UserService.class

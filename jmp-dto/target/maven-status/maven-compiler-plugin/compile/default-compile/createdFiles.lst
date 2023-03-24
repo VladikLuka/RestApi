@@ -1,0 +1,6 @@
+com/epam/dto/UserResponseDto.class
+com/epam/dto/User.class
+com/epam/dto/SubscriptionRequestDto.class
+com/epam/dto/UserRequestDto.class
+com/epam/dto/SubscriptionResponseDto.class
+com/epam/dto/Subscription.class
