@@ -41,24 +41,24 @@ public class UserController {
         return convertToUserResponseDto(user);
     }
 
+    @ApiOperation("Delete user by id")
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    @ApiOperation("Delete user by id")
     public void deleteUser(@PathVariable Long id){
         userService.deleteUser(id);
     }
 
+    @ApiOperation("Retrieve used by id")
     @GetMapping(value = "/{id}", produces = "application/json")
     @ResponseStatus(HttpStatus.OK)
-    @ApiOperation("Retrieve used by id")
     public UserResponseDto getUser(@PathVariable Long id){
         User user = userService.getUser(id);
         return convertToUserResponseDto(user);
     }
 
+    @ApiOperation("Retrieve all users")
     @GetMapping(value = "/")
     @ResponseStatus(HttpStatus.OK)
-    @ApiOperation("Retrieve all users")
     public List<UserResponseDto> getAllUser(){
         List<User> allUser = userService.getAllUser();
         return allUser.stream()
